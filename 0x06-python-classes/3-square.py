@@ -1,30 +1,25 @@
 #!/usr/bin/python
-# 0-square.py by Donna Govender
 """that defines a square """
 
 class Square:
-    """that represents a square"""
+    """ class Square that defines a square"""
 
     def __init__(self, size=0):
-        """this square class
+        """initialize square
         Args:
-            size: represnets the size of the square defined
-        Raises:
-            TypeError: if size is not integer
-            ValueError: if size is less than zero
+            size (int): size of the square
         """
-
-        if not isinstance(size, int):
+        if type(size) is not int:
             raise TypeError('size must be an integer')
-        if size < 0:
+        elif size < 0:
             raise ValueError('size must be >= 0')
-
-        self.__size = size
+        else:
+            self.__size = size  #: size of the square
 
     def area(self):
-        """
-        Calculate area of the square
-        Returns: The square of the size
-        """
+        """returns the area.
 
-        return (self.__size ** 2)
+        Returns:
+            ares.
+        """
+        return self.__size**2
